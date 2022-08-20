@@ -1,5 +1,6 @@
-Array.prototype.myreduce = function (callback, accumulator) {
+Array.prototype.myReduce = function (callback, initialValue) {
   if (!this.length) throw new Error("Empty array");
+  var accumulator = initialValue;
 
   if (!accumulator) {
     if (typeof this[0] === 'string') accumulator = '';
@@ -7,11 +8,11 @@ Array.prototype.myreduce = function (callback, accumulator) {
   }
 
   for (let i = 0; i < this.length; i++) {
-    accumulator = callback(accumulator, this[i]);
+    accumulator = callback(accumulator, this[i], i, this);
   }
   return accumulator;
 };
 
-const sum = [1, 5, 7, 9].myreduce((a,b) => a + b)
+const sum = [1, 5, 7, 9].myReduce((a,b) => a + b)
 
 console.log(sum)
