@@ -9,8 +9,6 @@ class MyPromise {
   #catchCbs = [];
   #state = STATE.PENDING;
   #value;
-  #onSuccessBinded = this.#onSuccess.bind(this);
-  #onFailBind = this.#onFail.bind(this);
 
   constructor(cb) {
     try {
