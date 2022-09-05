@@ -20,7 +20,7 @@ const randomColor = () => {
 const debounce = (fn, delay) => {
   let timeoutId;
   return function (...args) {
-    if (timeoutId) clearTimeout(timeoutId);
+    timoutId && clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
       fn(...args);
     }, delay);
