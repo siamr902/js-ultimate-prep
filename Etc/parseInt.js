@@ -1,0 +1,1 @@
+const num = parseInt('7*6', 10); // -> 7: stops parsing once no valid num in radix 

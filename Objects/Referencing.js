@@ -21,3 +21,12 @@ console.log(members); // { name: "Thomas" }
 // ^ Here the variable is modified, so no change takes effect;
 // however, changing the property (e.g. person.name = null) will
 // affect the output
+
+const a = {};
+const b = { key: 'b' };
+const c = { key: 'c' };
+
+a[b] = 123;
+a[c] = 456;
+
+console.log(a[b]); // 456
