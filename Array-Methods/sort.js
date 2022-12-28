@@ -9,6 +9,6 @@ console.log(order);
 
 const nums = [5, 8, 9, 4, 5, 0, 100, 52, 9, 1];
 
-const sorted = [...nums].sort((a, b) => a - b);
+const sorted = nums.sort((a, b) => a - b);
 
 console.log(sorted);

@@ -4,5 +4,5 @@ function isPromise(value) {
 
 const promise = new Promise(resolve => resolve(1));
 
-console.log(isPromise(promise));
-console.log(isPromise(1));
+console.log(isPromise(promise)); // true
+console.log(isPromise(1)); // false

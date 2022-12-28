@@ -11,8 +11,7 @@ function quickSort(arr) {
     else right.push(arr[i]);
   }
 
-  return [...quickSort(left), pivot, quickSort(right)];
+  return [...quickSort(left), pivot, ...quickSort(right)];
 }
 
-quickSort(arr)
-console.log(arr)
+console.log(quickSort(arr))

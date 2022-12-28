@@ -1,6 +1,7 @@
 const arr = [9, 4, 55, 2, 1, 58, 5, 99, 0, 3, 57, 1];
 
 function merge(left, right) {
+  console.log(left, right)
   const sortedArr = [];
   while (left.length && right.length) {
     if (left[0] <= right[0]) {
@@ -8,7 +9,7 @@ function merge(left, right) {
     } else sortedArr.push(right.shift());
   }
 //   arrays may not be equal in length, so we need to account for that
-  [...sortedArr, ...left, ...right]
+  return [...sortedArr, ...left, ...right];
 };
 
 function mergeSort(arr) {

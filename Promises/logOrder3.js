@@ -1,7 +1,7 @@
 console.log("begin");
 
 const fn = () => {
-  new Promise((res, rej) => {
+  new Promise((resolve, reject) => {
     console.log(1);
     resolve("Success");
   });

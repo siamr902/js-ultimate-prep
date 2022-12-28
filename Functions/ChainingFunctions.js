@@ -12,3 +12,9 @@ function compose(...functions) {
 const evaluate = compose(addSeven, subtractFour, multiplyFive);
 
 console.log(evaluate(5));
+
+function compose2(value, ...rest) {
+  return rest.reduceRight((val, fn) => fn(val), value)
+}
+
+console.log(compose2(5, addSeven, subtractFour, multiplyFive));

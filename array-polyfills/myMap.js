@@ -6,6 +6,6 @@ Array.prototype.mymap = function (callback) {
   return res;
 };
 
-const mult = [1, 2, 3].mymap((n) => n * 3);
+const cube = [1, 2, 3].mymap((n) => n * 3);
 
-console.log(mult);
+console.log(cube);

@@ -9,7 +9,7 @@ const gameSettingsProxy = new Proxy(gameSettings, {
   set: (obj, property, value) => {
     if (
       property === "difficulty" &&
-      !difficulties.includes(value).toLowerCase()
+      !difficulties.includes(value.toLowerCase())
     ) {
       throw new Error("Erroneous difficulty");
     }

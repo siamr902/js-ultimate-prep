@@ -13,6 +13,7 @@ function squareRoot(number) {
       end = mid - 1;
     }
   }
+  return ans
 }
 
 // binary search method
